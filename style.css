@@ -1,0 +1,389 @@
+
+:root{
+	--textColor:#000;
+	--borderR:10px;
+	--bagColor:#008000;
+	--hoverColor:#1dd61d;
+	--f-22:22px;
+	--f-17:17px;
+	--trans-5 :0.5s;
+	--trans-1 : 1s;
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	list-style:none;
+	text-decoration:none;
+}
+header{
+    background: #666;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+}header h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+}
+body{
+	user-select:none;
+	overflow-x: hidden;
+}
+.form{
+    min-height: calc(100vh - 50px);
+    background: linear-gradient(90deg, green, #000);
+}
+.container{
+	background:#fff;
+	padding:10px;
+	
+}
+input , select,button{
+	border:none;
+	outline:none;
+background:#ccc;	
+}
+@media (max-width:767px){
+.container{
+	width:100%;
+}
+
+}
+@media (min-width:768px){
+.container{
+	width:80%;
+	margin:0 auto;
+}
+
+}
+form{
+
+	
+}
+form .titleForm{
+	text-align:center;
+	padding:30px 0;
+	color:#000;
+	font-family:Amiri;
+	font-size:var(--f-22);
+	font-weight:500;
+	
+}
+form .box{
+	width:100%;
+	margin:15px 0;
+	padding:15px 0;
+}
+
+
+form .box.name{
+    display: grid;
+    gap: 40px 20px;
+    grid-template-columns: repeat(auto-fill ,minmax(250px , 1fr));
+}
+
+form .box.name .nameTitle,
+form .box.name .selectTitle{
+    width: 60%;
+    margin: 0 auto;
+    height: 40px;
+    border-radius: var(--borderR);
+    padding: 0 10px;
+    color: var(--textColor);
+    font-size: var(--f-17);
+    font-weight: 500;
+}
+
+
+
+
+form .box.inputPars{
+    display: grid;
+    gap: 40px 20px;
+    grid-template-columns: repeat(auto-fill ,minmax(150px , 1fr));
+}
+form .box.inputPars div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  
+}
+form .box.inputPars div input{
+	    width: 50%;
+    height: 30px;
+    border-radius: var(--borderR);
+    padding: 5px;
+}
+form .box.inputPars div input::-webkit-outer-spin-button,
+form .box.inputPars div input::-webkit-inner-spin-button{
+	 -webkit-appearance: none;
+	 display:none;
+}
+
+.boxSearch{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;	
+}
+.boxSearch > button,
+ .btn input{
+	background-color: var(--bagColor);
+    transition: var(--trans-5);
+    padding: 10px 20px;
+    border-radius: var(--borderR);
+    color: #fff;
+    font-size: var(--f-17);
+
+}
+.boxSearch > .activeSearch{
+	background:#2196f3;
+}
+.boxSearch > button:hover, .btn input:hover{
+		background-color:var(--hoverColor);
+}
+
+.btn {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+ .btn input{
+	 width:250px;
+	 margin:0 auto;
+ }
+.box{
+	border-bottom:2px solid #eee;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+background:#fff;	
+overflow:hidden;
+}
+table tr{
+	border:1px solid #ddd;
+	text-align:center;
+	height:40px;
+
+ 
+ }
+ table tbody tr{
+	 	transition:var(--trans-5);
+		
+ }
+table tbody tr:hover{
+	background:#eee;
+} 
+ table tbody tr td:last-child{
+    width: 50px;
+    position: relative;	 
+	cursor:pointer;
+ }
+ .listIcons{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    font-size: 22px;	
+}
+
+table tbody tr td ul{
+    position: absolute;
+    left: 200px;
+    width: 200px;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: var(--trans-5);
+
+ }
+ .activeUl{
+	  left: -200px;
+
+	
+ }
+ table tbody tr td ul li > i{
+    font-size: var(--f-17);	 
+ }
+
+
+
+
+ /* 1201 بكسل وأكثر — شاشات كبيرة جدًا، تلفزيون */
+@media (min-width:1201px){
+
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1200px){
+
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1024px){
+
+}
+/* 481 بكسل - 768 بكسل: أجهزة iPad والأجهزة اللوحية */
+@media (max-width:768px){
+
+ 	
+}
+/* 320 بكسل - 480 بكسل: الأجهزة المحمولة */
+@media (max-width:480px){
+
+
+
+}
+/* End sectionMain page  */
+
+
+
+
+
+
+
+
+
+
+footer{
+
+	background:#343434;
+}
+
+footer .footer.containerFooter{
+		width:90%;
+		margin:0 auto;
+	
+}
+@media(max-width:667px){
+	footer .footer.containerFooter{
+		width:100%;
+		padding:10px;
+	}
+}
+footer .footer{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: 20px;
+    direction: rtl;
+	
+}
+footer .footer >div{
+  font-family: "Amiri", serif;
+  font-size: 1rem;
+	padding:10px;
+
+	
+}
+@media(max-width:667px){
+	footer .footer >div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
+}
+footer .footer >div h6{
+	    font-size: 22px;
+    font-weight: 600;
+	color:#fff;
+}
+footer .footer >div > ul{
+/* 	direction: rtl; */
+}
+footer .footer >div ul li{
+    margin: 2px 0;
+    padding: 3px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+footer .footer >div ul li a{
+    transition: 0.5s;
+    transform: translateX(0px);
+    display: block;
+    width: fit-content;
+	color:#fff;
+}
+footer .footer >div ul li a .imgcoderhub{
+    width: 50px;
+    transform: scale(1.5);
+    margin-right: 9px;
+}
+footer .footer >div ul li a i{
+	font-size: 1.5rem;
+}
+footer .footer >div ul li a:hover{
+    transform: translateX(-5px);
+}
+
+footer .sectionPage{
+	height:100px;
+	background:green;
+	border-top:2px solid red;
+}
+footer .sectionPage .langePageDivs{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row-reverse;
+    padding-right: 30px;
+    height: 50px;
+	direction: ltr;
+}
+footer .sectionPage .langePageDivs select{
+	width: 100px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+footer .sectionPage .majidDivs {
+	 display: flex;
+    align-items: center;
+    justify-content: center;
+	    margin-top: -20px;
+}
+footer .sectionPage .majidDivs h5{
+   font-family: "Amiri", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+footer .sectionPage .langePageDivs{
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
