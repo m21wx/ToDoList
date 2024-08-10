@@ -87,14 +87,17 @@ form .box{
 
 
 form .box.name{
-    display: grid;
-    gap: 40px 20px;
-    grid-template-columns: repeat(auto-fill ,minmax(250px , 1fr));
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px 0;
 }
 
 form .box.name .nameTitle,
 form .box.name .selectTitle{
-    width: 60%;
+    min-width: 200px;
+    width: 40%;
     margin: 0 auto;
     height: 40px;
     border-radius: var(--borderR);
@@ -108,9 +111,10 @@ form .box.name .selectTitle{
 
 
 form .box.inputPars{
-    display: grid;
-    gap: 40px 20px;
-    grid-template-columns: repeat(auto-fill ,minmax(150px , 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 form .box.inputPars div{
     display: flex;
